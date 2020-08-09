@@ -12,42 +12,27 @@
             <div class="p-5">
                 <h5 class="font-weight-normal s-14">Ulasan</h5>
                 <span class="s-48 font-weight-lighter light-green-text">675</span>
-                <div> Carbon
-                    <span class="text-light-green">
-                        <i class="icon icon-arrow_downward"></i> 67%</span>
-                </div>
+                <div>Artikel</div>
             </div>
             <div class="p-5 light">
                 <h5 class="font-weight-normal s-14">Kajian</h5>
                 <span class="s-48 font-weight-lighter text-primary">300</span>
-                <div> Hydrogen
-                    <span class="text-primary">
-                        <i class="icon icon-arrow_downward"></i> 67%</span>
-                </div>
+                <div>Artikel</div>
             </div>
             <div class="p-5">
                 <h5 class="font-weight-normal s-14">Kreativitas</h5>
                 <span class="s-48 font-weight-lighter amber-text">700</span>
-                <div> Helium
-                    <span class="amber-text">
-                        <i class="icon icon-arrow_downward"></i> 67%</span>
-                </div>
+                <div>Artikel</div>
             </div>
             <div class="p-5 light">
                 <h5 class="font-weight-normal s-14">Serba Serbi</h5>
                 <span class="s-48 font-weight-lighter text-indigo">411</span>
-                <div> Iron
-                    <span class="text-indigo">
-                        <i class="icon icon-arrow_downward"></i> 89%</span>
-                </div>
+                <div>Artikel</div>
             </div>
             <div class="p-5">
                 <h5 class="font-weight-normal s-14">Konsultasi</h5>
                 <span class="s-48 font-weight-lighter pink-text">224</span>
-                <div> Sodium
-                    <span class="pink-text">
-                        <i class="icon icon-arrow_downward"></i> 47%</span>
-                </div>
+                <div>Artikel</div>  
             </div>
         </div>
     </div>
