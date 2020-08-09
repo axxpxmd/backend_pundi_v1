@@ -35,7 +35,7 @@
                 <div class="user-panel p-3 light mb-2">
                     <div>
                         <div class="float-left image">
-                            <img class="user_avatar" src="{{ asset('assets/img/dummy/u4.png')}}" alt="User Image">
+                            <img class="user_avatar" src="{{ asset('images/boy.png')}}" alt="User Image">
                         </div>
                         <div class="float-left info">
                             <h6 class="font-weight-light mt-2 mb-1">{{ Auth::user()->username }}</h6>
