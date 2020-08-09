@@ -2,7 +2,7 @@
     <li class="header"><strong>MAIN NAVIGATION</strong></li>
     <li>
         <a href="{{ route('home') }}">
-            <i class="icon icon-sailing-boat-water purple-text s-18"></i> 
+            <i class="icon icon-dashboard2 blue-text s-18"></i> 
             <span>Dashboard</span>
         </a>
     </li>

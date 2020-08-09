@@ -32,7 +32,7 @@
                             @if(Auth::user()->user)
                             <img src="{{ Auth::user()->user->foto == '' ? asset('assets/img/dummy/u1.png') : env('SFTP_SRC').'foto/'.Auth::user()->user->foto }}" class="user-image fotoLink" alt="User Image">
                             @else
-                            <img src="{{ asset('assets/img/dummy/u1.png') }}" class="user-image fotoLink" alt="User Image">
+                            <img src="{{ asset('assets/img/dummy/u4.png')}}" class="user-image fotoLink" alt="User Image">
                             @endif
                             <i class="icon-more_vert "></i>
                         </a>

@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Title --> 
-    <link rel="icon" href="{{ asset('assets/img/favicon.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/logo-round.png') }}" type="image/x-icon">
     <title>{{ config('app.name') }} @yield('title')</title>
 
     <!-- CSS -->
@@ -29,7 +29,7 @@
     <aside class="main-sidebar fixed offcanvas shadow" data-toggle='offcanvas'>
         <section class="sidebar">
             <div class=" mt-3 mb-3 ml-3">
-                <img src="{{ asset('images/logo.png')}}" class="mt-2 mb-2 ml-2" width="200" alt="Logo Top">
+                <img src="{{ asset('images/logo.png')}}" class="mt-2 mb-2 ml-4" width="150" alt="Logo Top">
             </div>
             <div class="relative">
                 <div class="user-panel p-3 light mb-2">
