@@ -37,17 +37,11 @@
                             <i class="icon-more_vert "></i>
                         </a>
                         <div class="dropdown-menu p-4 dropdown-menu-right" style="width:255px">
-                            <div class="row box justify-content-between">
+                            <div class="box justify-content-between">
                                 <div class="col">
                                     <a href="#">
                                         <i class="icon-user amber-text lighten-2 avatar r-5"></i>
                                         <div class="pt-1">Profil</div>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <a href="#">
-                                        <i class="icon-user-secret pink-text lighten-1 avatar  r-5"></i>
-                                        <div class="pt-1">Ganti Password</div>
                                     </a>
                                 </div>
                                 <div class="col">

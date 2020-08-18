@@ -7,7 +7,6 @@
         </a>
     </li>
     <!-- Master Role -->
-    @can('master-role')
     <li class="header light"><strong>MASTER ROLE</strong></li>
     <li>
         <a href="{{ route('master-role.role.index') }}">
@@ -16,51 +15,29 @@
         </a>
     </li>
     <li class="no-b">
-        <a href="{{ route('master-role.permission.index') }}">
+        <a>
             <i class="icon icon-clipboard-list2 text-success s-18"></i> 
             <span>Permission</span>
         </a>
     </li>
-    <li class="header light"><strong>MASTER CONFIG</strong></li>
-    <li class="treeview">
-        <a href="#">
-            <i class="icon icon-settings light-blue-text s-18"></i> 
-            <span>Config</span><i class="icon icon-angle-left s-18 pull-right"></i>
+    <li class="no-b">
+        <a>
+            <i class="icon icon-users blue-text s-18"></i> 
+            <span>Pengguna</span>
         </a>
-        <ul class="treeview-menu">
-            <li>
-                <a href="{{ route('master-config.app.index') }}">
-                    <i class="icon icon-settings2"></i><span>Config App</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="icon icon-settings2"></i><span>Config Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="icon icon-settings2"></i><span>Config Auth</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="icon icon-settings2"></i><span>Config Theme</span>
-                </a>
-            </li>
-        </ul>
     </li>
-    @endcan
-    <!-- Master Pengguna -->
-    @can('master-pengguna')
-    <li class="header light"><strong>MASTER PENGGUNA</strong></li>
-    @endcan
-    <!-- Master API -->
-    @can('master-api')
-    <li class="header light"><strong>MASTER API</strong></li>
-    @endcan
-    <!-- Master Mobile -->
-    @can('master-mobile')
-    <li class="header light"><strong>MASTER MOBILE</strong></li>
-    @endcan
+    {{-- <li class="header light"><strong>MASTER USER</strong></li>
+    <li class="no-b">
+        <a>
+            <i class="icon icon-user blue-text s-18"></i> 
+            <span>User</span>
+        </a>
+    </li>
+    <li class="header light"><strong>MASTER USER </strong></li>
+    <li class="no-b">
+        <a>
+            <i class="icon icon-user blue-text s-18"></i> 
+            <span>User</span>
+        </a>
+    </li> --}}
 </ul>
