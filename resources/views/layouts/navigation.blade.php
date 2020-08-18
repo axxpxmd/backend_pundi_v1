@@ -15,7 +15,7 @@
         </a>
     </li>
     <li class="no-b">
-        <a>
+        <a href="{{ route('master-role.permission.index') }}">
             <i class="icon icon-clipboard-list2 text-success s-18"></i> 
             <span>Permission</span>
         </a>
