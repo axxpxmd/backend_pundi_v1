@@ -42,6 +42,10 @@
                                     </div>
                                     <div class="row">
                                         <label class="col-md-2 text-right s-12"><strong>Nama :</strong></label>
+                                        <label class="col-md-3 s-12">{{ $admin_detail->nama }}</label>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-2 text-right s-12"><strong>Email :</strong></label>
                                         <label class="col-md-3 s-12">{{ $admin_detail->email }}</label>
                                     </div>
                                     <div class="row">
@@ -51,9 +55,9 @@
                                     <div class="row">
                                         <label class="col-md-2 text-right s-12"><strong>Foto :</strong></label>
                                         @if ($admin_detail->photo != null)
-                                        <img class="ml-2 m-t-7" src="{{ config('app.ftp_src').'ava/'.$admin_detail->photo }}" width="100" alt="icon">
+                                        <img class="ml-2 m-t-7 rounded-circle" src="{{ config('app.ftp_src').'ava/'.$admin_detail->photo }}" width="100" alt="icon">
                                         @else
-                                        <img class="ml-2 m-t-7" src="{{ asset('images/boy.png') }}" width="100" alt="icon">
+                                        <img class="ml-2 m-t-7 rounded-circle" src="{{ asset('images/boy.png') }}" width="100" alt="icon">
                                         @endif
                                     </div>
                                 </div>
@@ -78,7 +82,17 @@
                                                 <label for="username" class="col-form-label s-12 col-md-2">Username</label>
                                                 <input type="text" name="username" id="username" class="form-control r-0 light s-12 col-md-6" value="{{ $admin->username }}" autocomplete="off" required/>
                                             </div>
-                                            <div class="form-group m-0">
+                                            <div class="form-group">
+                                                <label class="col-form-label s-12 col-md-2">Role</label>
+                                                <div class="col-md-6 p-0 bg-light">
+                                                    <select class="select2 form-control r-0 light s-12" name="role_id" id="role_id" autocomplete="off">
+                                                        @foreach ($roles as $i)
+                                                            <option value="{{ $i->id }}">{{ $i->name }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group m-t-5">
                                                 <label for="nama" class="col-form-label s-12 col-md-2">Nama</label>
                                                 <input type="text" name="nama" id="nama" class="form-control r-0 light s-12 col-md-6" value="{{ $admin_detail->nama }}" autocomplete="off" required/>
                                             </div>
@@ -127,6 +141,9 @@
 @endsection
 @section('script')
 <script type="text/javascript">
+    $('#role_id').val("{{$role->id}}");
+    $('#role_id').trigger('change.select2');
+
     (function () {
         'use strict';
         $('.input-file').each(function () {

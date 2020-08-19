@@ -15,11 +15,11 @@ class UserComposer
         /**
          * get admin detail
          */
-        $admin_detail = '-';
+        $user_composer = '-';
         if (Auth::user() != null) {
-            $admin_detail = AdminDetails::where('admin_id', Auth::user()->id)->first();
+            $user_composer = AdminDetails::where('admin_id', Auth::user()->id)->first();
         }
 
-        $view->with('admin_detail', $admin_detail);
+        $view->with('user_composer', $user_composer);
     }
 }

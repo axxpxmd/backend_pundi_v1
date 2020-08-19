@@ -42,7 +42,7 @@
                 <ul class="nav navbar-nav">
                     <li class="dropdown custom-dropdown user user-menu ">
                         <a href="#" class="nav-link" data-toggle="dropdown">
-                            <img src="{{ config('app.ftp_src').'ava/'.$admin_detail->photo }}" class="user-image fotoLink" alt="User Image">
+                            <img src="{{ config('app.ftp_src').'ava/'.$user_composer->photo }}" class="user-image fotoLink" alt="User Image">
                             <i class="icon-more_vert "></i>
                         </a>
                         <div class="dropdown-menu p-4 dropdown-menu-right" style="width:255px">
