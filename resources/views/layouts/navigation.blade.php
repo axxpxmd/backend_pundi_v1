@@ -6,7 +6,7 @@
             <span>Dashboard</span>
         </a>
     </li>
-    <!-- Master Role -->
+    @can('master-role')
     <li class="header light"><strong>MASTER ROLE</strong></li>
     <li>
         <a href="{{ route('master-role.role.index') }}">
@@ -21,11 +21,12 @@
         </a>
     </li>
     <li class="no-b">
-        <a>
+        <a href="{{ route('master-role.pegawai.index') }}">
             <i class="icon icon-users blue-text s-18"></i> 
-            <span>Pengguna</span>
+            <span>Pegawai</span>
         </a>
     </li>
+    @endcan
     {{-- <li class="header light"><strong>MASTER USER</strong></li>
     <li class="no-b">
         <a>

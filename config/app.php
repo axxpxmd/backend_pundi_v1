@@ -123,6 +123,9 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'ftp_root' => env('FTP_ROOT'),
+    'ftp_src' => env('FTP_SRC'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -228,7 +231,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
     ],
 
 ];

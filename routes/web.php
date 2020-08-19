@@ -35,5 +35,9 @@ Route::group(['middleware' => ['auth']], function () {
         // Permission
         Route::resource('permission', 'PermissionController');
         Route::post('permission/api', 'PermissionController@api')->name('permission.api');
+
+        // Pegawai
+        Route::resource('pegawai', 'PegawaiController');
+        Route::post('pegawai/api', 'PegawaiController@api')->name('pegawai.api');
     });
 });

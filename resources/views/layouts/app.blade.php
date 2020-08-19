@@ -32,6 +32,9 @@
                 <img src="{{ asset('images/logo.png')}}" class="mt-2 mb-2 ml-4" width="150" alt="Logo Top">
             </div>
             <div class="relative">
+                <a data-toggle="collapse" href="#userSettingsCollapse" role="button" class="btn-fab btn-fab-sm absolute fab-right-bottom fab-top btn-primary shadow1 ">
+                    <i class="icon icon-cogs"></i>
+                </a>
                 <div class="user-panel p-3 light mb-2">
                     <div>
                         <div class="float-left image">
@@ -43,6 +46,19 @@
                         </div>
                     </div>
                     <div class="clearfix"></div>
+                    <div class="collapse multi-collapse" id="userSettingsCollapse">
+                        <div class="list-group mt-3 shadow">
+                            <a href="#" class="list-group-item list-group-item-action ">
+                                <i class="mr-2 icon-user text-blue"></i>Profile
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="mr-2 icon-cogs"></i>Settings
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="mr-2 icon-key4 orange-text"></i>Change Password
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             @include('layouts.navigation')
