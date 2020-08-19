@@ -27,14 +27,16 @@
         </a>
     </li>
     @endcan
-    {{-- <li class="header light"><strong>MASTER USER</strong></li>
+    @can('master-user')
+    <li class="header light"><strong>USER</strong></li>
     <li class="no-b">
-        <a>
-            <i class="icon icon-user blue-text s-18"></i> 
+        <a href="{{ route('master-user.user.index') }}">
+            <i class="icon icon-user red-text s-18"></i> 
             <span>User</span>
         </a>
     </li>
-    <li class="header light"><strong>MASTER USER </strong></li>
+    @endcan
+    {{-- <li class="header light"><strong>MASTER USER </strong></li>
     <li class="no-b">
         <a>
             <i class="icon icon-user blue-text s-18"></i> 

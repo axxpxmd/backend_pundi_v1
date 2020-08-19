@@ -40,4 +40,11 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('pegawai', 'PegawaiController');
         Route::post('pegawai/api', 'PegawaiController@api')->name('pegawai.api');
     });
+
+    // Master User
+    Route::prefix('master-users')->namespace('MasterUser')->name('master-user.')->group(function () {
+        // User
+        Route::resource('user', 'UserController');
+        Route::post('user/api', 'UserController@api')->name('user.api');
+    });
 });
