@@ -38,11 +38,11 @@
                 <div class="user-panel p-3 light mb-2">
                     <div>
                         <div class="float-left image">
-                            <img class="user_avatar" src="{{ asset('images/boy.png')}}" alt="User Image">
+                            <img width="50" class="mr-3 rounded-circle" src="{{ config('app.ftp_src').'ava/'.$admin_detail->photo }}" alt="User Image">
                         </div>
                         <div class="float-left info">
-                            <h6 class="font-weight-light mt-2 mb-1">{{ Auth::user()->username }}</h6>
-                            <a href="#"><i class="icon-circle text-primary blink"></i> Online</a>
+                            <h6 class="font-weight-light mb-1">{{ Auth::user()->username }}</h6>
+                            <a href="#"><i class="icon-circle text-primary blink mr-1"></i>Online</a>
                         </div>
                     </div>
                     <div class="clearfix"></div>

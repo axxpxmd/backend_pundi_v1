@@ -26,22 +26,23 @@
                             <a id="detik"></a>
                         </li>
                     </div>
-                    @if(Auth::user()->user)
-                    <div class="d-none d-md-block">
-                        <h1 class="nav-title text-white">Login Sebagai {{ Auth::user()->user->username }}</h1>
-                    </div>
-                    @endif
                 </div>
             </div>
+            {{-- <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li class="user user-menu text-bold">
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link text-white">
+                            <strong>Keluar <i class="icon-sign-out"></i></strong>
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;" target="_top">@csrf</form>
+                    </li>
+                </ul>
+            </div> --}}
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <li class="dropdown custom-dropdown user user-menu ">
                         <a href="#" class="nav-link" data-toggle="dropdown">
-                            @if(Auth::user()->user)
-                            <img src="{{ Auth::user()->user->foto == '' ? asset('images/boy.png') : env('SFTP_SRC').'foto/'.Auth::user()->user->foto }}" class="user-image fotoLink" alt="User Image">
-                            @else
-                            <img src="{{ asset('images/boy.png') }}" class="user-image fotoLink" alt="User Image">
-                            @endif
+                            <img src="{{ config('app.ftp_src').'ava/'.$admin_detail->photo }}" class="user-image fotoLink" alt="User Image">
                             <i class="icon-more_vert "></i>
                         </a>
                         <div class="dropdown-menu p-4 dropdown-menu-right" style="width:255px">
