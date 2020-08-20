@@ -47,4 +47,11 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('user', 'UserController');
         Route::post('user/api', 'UserController@api')->name('user.api');
     });
+
+    // Master Artikel
+    Route::prefix('master-artikels')->namespace('MasterArtikel')->name('master-artikel.')->group(function () {
+        // Artikel Terverifikasi
+        Route::resource('artikel-terverifikasi', 'TerverifikasiController');
+        Route::post('artikel-terverifikasi/api', 'TerverifikasiController@api')->name('artikel-terverifikasi.api');
+    });
 });

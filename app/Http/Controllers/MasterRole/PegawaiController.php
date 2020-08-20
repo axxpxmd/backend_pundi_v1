@@ -140,7 +140,7 @@ class PegawaiController extends Controller
 
         // get role_id by user
         $model_has_role = ModelHasRoles::where('model_id', $admin_detail->admin_id)->first();
-        $role  = Role::select('id')->whereid($model_has_role->role_id)->first();
+        $role  = Role::select('id', 'name')->whereid($model_has_role->role_id)->first();
 
         return view($this->view . 'show', compact(
             'route',

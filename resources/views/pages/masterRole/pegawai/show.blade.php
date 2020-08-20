@@ -41,6 +41,10 @@
                                         <label class="col-md-3 s-12">{{ $admin->username }}</label>
                                     </div>
                                     <div class="row">
+                                        <label class="col-md-2 text-right s-12"><strong>Role :</strong></label>
+                                        <label class="col-md-3 s-12">{{ $role->name }}</label>
+                                    </div>
+                                    <div class="row">
                                         <label class="col-md-2 text-right s-12"><strong>Nama :</strong></label>
                                         <label class="col-md-3 s-12">{{ $admin_detail->nama }}</label>
                                     </div>

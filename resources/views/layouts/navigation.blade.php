@@ -31,16 +31,24 @@
     <li class="header light"><strong>USER</strong></li>
     <li class="no-b">
         <a href="{{ route('master-user.user.index') }}">
-            <i class="icon icon-user red-text s-18"></i> 
+            <i class="icon icon-user purple-text s-18"></i> 
             <span>User</span>
         </a>
     </li>
     @endcan
-    {{-- <li class="header light"><strong>MASTER USER </strong></li>
+    @can('master-artikel')
+    <li class="header light"><strong>ARTIKEL</strong></li>
+    <li class="no-b">
+        <a href="{{ route('master-artikel.artikel-terverifikasi.index') }}">
+            <i class="icon icon-document-checked2 text-success s-18"></i> 
+            <span>Terverifikasi</span>
+        </a>
+    </li>
     <li class="no-b">
         <a>
-            <i class="icon icon-user blue-text s-18"></i> 
-            <span>User</span>
+            <i class="icon icon-document-cancel2 text-danger s-18"></i> 
+            <span>Belum Terverifikasi</span>
         </a>
-    </li> --}}
+    </li>
+    @endcan
 </ul>
