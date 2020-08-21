@@ -39,6 +39,8 @@ Route::group(['middleware' => ['auth']], function () {
         // Pegawai
         Route::resource('pegawai', 'PegawaiController');
         Route::post('pegawai/api', 'PegawaiController@api')->name('pegawai.api');
+        Route::get('pegawai/{id}/editPassword', 'PegawaiController@editPassword')->name('pegawai.editPassword');
+        Route::post('pegawai/{id}/updatePassword', 'PegawaiController@updatePassword')->name('pegawai.updatePassword');
     });
 
     // Master User

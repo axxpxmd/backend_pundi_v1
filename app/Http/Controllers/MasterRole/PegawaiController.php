@@ -239,4 +239,37 @@ class PegawaiController extends Controller
             'message' => 'Data ' . $this->title . ' berhasil dihapus.'
         ]);
     }
+
+    public function editPassword($id)
+    {
+        $route = $this->route;
+        $title = $this->title;
+
+        $admin_detail = AdminDetails::findOrFail($id);
+
+        return view($this->view . 'form_password', compact(
+            'route',
+            'title',
+            'admin_detail'
+        ));
+    }
+
+    public function updatePassword(Request $request, $id)
+    {
+        $admin_detail = AdminDetails::find($id);
+        $request->validate([
+            'password'         => 'required|string|min:8',
+            'confirm_password' => 'required|same:password'
+        ]);
+
+        $password = $request->password;
+        $admin    = User::find($admin_detail->admin_id);
+        $admin->update([
+            'password' => Hash::make($password)
+        ]);
+
+        return response()->json([
+            'message' => 'Data ' . $this->title . ' berhasil diperbaharui.'
+        ]);
+    }
 }

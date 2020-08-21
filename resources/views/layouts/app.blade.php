@@ -73,7 +73,6 @@
     <script type="text/javascript">
         var APP_URL = {!! json_encode(url('/').'/') !!}
     </script>
-    <script src="{{ asset('js/myScript.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="{{ asset('assets/js/myScript.js') }}"></script>
     <script src="{{ asset('assets/js/jquery-confirm.min.js') }}"></script>
