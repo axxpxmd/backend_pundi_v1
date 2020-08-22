@@ -226,11 +226,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link active show" id="tab1" data-toggle="tab" href="#v-pills-tab1"
                                         role="tab" aria-controls="tab1" aria-expanded="true"
-                                        aria-selected="true">Today</a>
+                                        aria-selected="true">View Artikel</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="tab2" data-toggle="tab" href="#v-pills-tab2" role="tab"
-                                        aria-controls="tab2" aria-selected="false">Yesterday</a>
+                                        aria-controls="tab2" aria-selected="false">Total Artikel</a>
                                 </li>
                             </ul>
                         </div>
@@ -242,96 +242,36 @@
                             aria-labelledby="v-pills-tab1">
                             <div class="bg-primary text-white lighten-2">
                                 <div class="pt-5 pb-2 pl-5 pr-5">
-                                    <h5 class="font-weight-normal s-14">Today's Income</h5>
-                                    <span class="s-48 font-weight-lighter text-primary">
-                                        <small>$</small>960</span>
+                                    <h5 class="font-weight-normal s-14">Total artikel dilihat</h5>
+                                    <span class="s-48 font-weight-lighter text-primary sc-counter">{{ $countArtikel }}</span>
                                     <div class="float-right">
-                                        <span class="icon icon-money-bag s-48"></span>
+                                        <span class="icon icon-eye s-48"></span>
                                     </div>
                                 </div>
-                                <canvas width="378" height="94" data-chart="spark" data-chart-type="line"
-                                    data-dataset="[[28,530,200,430]]" data-labels="['a','b','c','d']"
-                                    data-dataset-options="[
-                        { borderColor:  'rgba(54, 162, 235, 1)', backgroundColor: 'rgba(54, 162, 235,1)'},
-                        ]">
-                                </canvas>
+                                <canvas width="378" height="94" data-chart="spark" data-chart-type="line" data-dataset="[[28,530,200,430]]" data-labels="['a','b','c','d']" data-dataset-options="[{ borderColor:  'rgba(54, 162, 235, 1)', backgroundColor: 'rgba(54, 162, 235,1)'},]"></canvas>
                             </div>
-                            <div class="slimScroll b-b" data-height="385">
+                            <div class="card-body p-0 bg-light slimScroll" data-height="370">
                                 <div class="table-responsive">
-                                    <table class="table table-hover earning-box">
-                                        <thead class="no-b">
-                                            <tr>
-                                                <th colspan="2">Client Name</th>
-                                                <th>Item Purchased</th>
-                                                <th>Price</th>
-                                            </tr>
-                                        </thead>
+                                    <table class="table table-hover">
                                         <tbody>
-                                            <tr>
-                                                <td class="w-10">
-                                                    <a href="panel-page-profile.html" class="avatar avatar-lg">
-                                                        <img src="assets/img/dummy/u6.png" alt="">
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <h6>Sara Kamzoon</h6>
-                                                    <small class="text-muted">Marketing Manager</small>
-                                                </td>
-                                                <td>25</td>
-                                                <td>$250</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="w-10">
-                                                    <a href="panel-page-profile.html" class="avatar avatar-lg">
-                                                        <img src="assets/img/dummy/u5.png" alt="">
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <h6>Sara Kamzoon</h6>
-                                                    <small class="text-muted">Marketing Manager</small>
-                                                </td>
-                                                <td>25</td>
-                                                <td>$250</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="w-10">
-                                                    <a href="panel-page-profile.html" class="avatar avatar-lg">
-                                                        <img src="assets/img/dummy/u4.png" alt="">
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <h6>Sara Kamzoon</h6>
-                                                    <small class="text-muted">Marketing Manager</small>
-                                                </td>
-                                                <td>25</td>
-                                                <td>$250</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="w-10">
-                                                    <a href="panel-page-profile.html" class="avatar avatar-lg">
-                                                        <img src="assets/img/dummy/u3.png" alt="">
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <h6>Sara Kamzoon</h6>
-                                                    <small class="text-muted">Marketing Manager</small>
-                                                </td>
-                                                <td>25</td>
-                                                <td>$250</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="w-10">
-                                                    <a href="panel-page-profile.html" class="avatar avatar-lg">
-                                                        <img src="assets/img/dummy/u2.png" alt="">
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <h6>Sara Kamzoon</h6>
-                                                    <small class="text-muted">Marketing Manager</small>
-                                                </td>
-                                                <td>25</td>
-                                                <td>$250</td>
-                                            </tr>
+                                        <tr class="no-b">
+                                            <th></th>
+                                            <th>Judul</th>
+                                            <th>View</th>
+                                            <th>Penulis</th>
+                                        </tr>
+                                        <?php $no = 0;?>
+                                        @foreach ($listArtikel as $i)
+                                        <?php $no++ ;?>
+                                        <tr>
+                                            <td class="text-center">{{ $no }}</td>
+                                            <td>
+                                                <a href="#">{{  substr( $i->judul,0,30) }} <strong>...</strong></a>
+                                            </td>
+                                            <td>{{ $i->artikel_view }}</td>
+                                            <td class="text-uppercase">{{ $i->penulis->nama_depan }}</td>
+                                        </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -341,97 +281,39 @@
                             aria-labelledby="v-pills-tab2">
                             <div class="bg-primary text-white lighten-2">
                                 <div class="pt-5 pb-2 pl-5 pr-5">
-                                    <h5 class="font-weight-normal s-14">Yesterday's Income</h5>
-                                    <span class="s-48 font-weight-lighter text-primary">
-                                        <small>$</small>1100</span>
+                                    <h5 class="font-weight-normal s-14">Total semua artikel</h5>
+                                    <span class="s-48 font-weight-lighter text-primary">{{ $totalArtikel }}</span>
                                     <div class="float-right">
-                                        <span class="icon icon-money-bag s-48"></span>
+                                        <span class="icon icon-document2 s-48"></span>
                                     </div>
                                 </div>
-                                <canvas width="378" height="94" data-chart="spark" data-chart-type="line"
-                                    data-dataset="[[620,20,700,50]]" data-labels="['a','b','c','d']"
-                                    data-dataset-options="[
-                        { borderColor:  'rgba(54, 162, 235, 1)', backgroundColor: 'rgba(54, 162, 235,1)'},
-                        ]">
-                                </canvas>
+                                <canvas width="378" height="94" data-chart="spark" data-chart-type="line" data-dataset="[[620,20,700,50]]" data-labels="['a','b','c','d']" data-dataset-options="[ { borderColor:  'rgba(54, 162, 235, 1)', backgroundColor: 'rgba(54, 162, 235,1)'},]"></canvas>
                             </div>
-                            <div class="table-responsive">
-                                <table class="table table-hover earning-box">
-                                    <thead class="no-b">
-                                        <tr>
-                                            <th colspan="2">Client Name</th>
-                                            <th>Item Purchased</th>
-                                            <th>Price</th>
+                            <div class="card-body p-0 bg-light slimScroll" data-height="370">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                        <tr class="no-b">
+                                            <th></th>
+                                            <th>User</th>
+                                            <th>Jumlah Artikel</th>
+                                            <th>Total View</th>
                                         </tr>
-                                    </thead>
-                                    <tbody>
+                                        <?php $no = 0;?>
+                                        @foreach ($totalUserArtikel as $i)
+                                        <?php $no++ ;?>
                                         <tr>
-                                            <td class="w-10">
-                                                <span class="round">
-                                                    <img src="assets/img/dummy/u1.png" alt="user">
-                                                </span>
-                                            </td>
+                                            <td class="text-center">{{ $no }}</td>
                                             <td>
-                                                <h6>Sara Kamzoon</h6>
-                                                <small class="text-muted">Marketing Manager</small>
+                                                <a href="{{ route('master-user.user.show', $i->user_id) }}" class="text-uppercase">{{ $i->name }}</a>
                                             </td>
-                                            <td>25</td>
-                                            <td>$250</td>
+                                            <td>{{ $i->total_artikel }}</td>
+                                            <td>{{ $i->total_view }}</td>
                                         </tr>
-                                        <tr>
-                                            <td class="w-10">
-                                                <span class="round">
-                                                    <img src="assets/img/dummy/u2.png" alt="user">
-                                                </span>
-                                            </td>
-                                            <td>
-                                                <h6>Sara Kamzoon</h6>
-                                                <small class="text-muted">Marketing Manager</small>
-                                            </td>
-                                            <td>25</td>
-                                            <td>$250</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="w-10">
-                                                <span class="round">
-                                                    <img src="assets/img/dummy/u3.png" alt="user">
-                                                </span>
-                                            </td>
-                                            <td>
-                                                <h6>Sara Kamzoon</h6>
-                                                <small class="text-muted">Marketing Manager</small>
-                                            </td>
-                                            <td>25</td>
-                                            <td>$250</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="w-10">
-                                                <span class="round">
-                                                    <img src="assets/img/dummy/u4.png" alt="user">
-                                                </span>
-                                            </td>
-                                            <td>
-                                                <h6>Sara Kamzoon</h6>
-                                                <small class="text-muted">Marketing Manager</small>
-                                            </td>
-                                            <td>25</td>
-                                            <td>$250</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="w-10">
-                                                <span class="round">
-                                                    <img src="assets/img/dummy/u5.png" alt="user">
-                                                </span>
-                                            </td>
-                                            <td>
-                                                <h6>Sara Kamzoon</h6>
-                                                <small class="text-muted">Marketing Manager</small>
-                                            </td>
-                                            <td>25</td>
-                                            <td>$250</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
