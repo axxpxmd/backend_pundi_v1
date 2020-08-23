@@ -224,13 +224,10 @@
                             <ul id="myTab4" role="tablist"
                                 class="nav nav-tabs card-header-tabs nav-material nav-material-white float-right">
                                 <li class="nav-item">
-                                    <a class="nav-link active show" id="tab1" data-toggle="tab" href="#v-pills-tab1"
-                                        role="tab" aria-controls="tab1" aria-expanded="true"
-                                        aria-selected="true">View Artikel</a>
+                                    <a class="nav-link active show" id="tab1" data-toggle="tab" href="#v-pills-tab1" role="tab" aria-controls="tab1" aria-expanded="true" aria-selected="true">View Artikel</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="tab2" data-toggle="tab" href="#v-pills-tab2" role="tab"
-                                        aria-controls="tab2" aria-selected="false">Total Artikel</a>
+                                    <a class="nav-link" id="tab2" data-toggle="tab" href="#v-pills-tab2" role="tab" aria-controls="tab2" aria-selected="false">Total Artikel</a>
                                 </li>
                             </ul>
                         </div>

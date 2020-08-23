@@ -59,7 +59,7 @@ class HomeController extends Controller
          * Total artikel
          */
         $totalArtikel     = Artikel::count();
-        $totalUserArtikel = DB::select('SELECT COUNT(judul) as total_artikel, name, SUM(artikel_view) as total_view, users.id as user_id FROM artikel JOIN users on artikel.penulis_id = users.id GROUP BY name,user_id ORDER BY name DESC LIMIT 10');
+        $totalUserArtikel = DB::select('SELECT COUNT(judul) as total_artikel, name, SUM(artikel_view) as total_view, users.id as user_id FROM artikel JOIN users on artikel.penulis_id = users.id GROUP BY name,user_id ORDER BY total_artikel DESC LIMIT 10');
 
         return view('home', compact(
             'ulasan',
