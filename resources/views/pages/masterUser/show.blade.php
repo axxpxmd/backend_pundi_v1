@@ -67,7 +67,7 @@
                         <label class="col-md-3 s-12">{{ $userPundi->instagram }}</label>
                     </div>
                     <div class="row">
-                        <label class="col-md-2 text-right s-12"><strong>Logo  :</strong></label>
+                        <label class="col-md-2 text-right s-12"><strong>Foto  :</strong></label>
                         <img class="ml-2 m-t-7 rounded-circle" src="{{ config('app.ftp_src').'/ava/'.$userPundi->photo }}" width="100" alt="icon">
                     </div>
                 </div>

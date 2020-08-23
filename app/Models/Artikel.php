@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+// Model
+use App\User;
+
 class Artikel extends Model
 {
     protected $table    = 'artikel';
@@ -12,5 +15,10 @@ class Artikel extends Model
     public function penulis()
     {
         return $this->belongsTo(userPundi::class, 'penulis_id');
+    }
+
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class, 'kategori_id');
     }
 }

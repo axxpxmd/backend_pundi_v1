@@ -127,7 +127,6 @@
     }
 
     function reset(){
-        save_method = "add";
         $('#form').trigger('reset');
         $('#preview').attr({ 'src': '-', 'alt': ''});
         $('#changeText').html('Browse Image')

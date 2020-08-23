@@ -54,6 +54,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::prefix('master-artikels')->namespace('MasterArtikel')->name('master-artikel.')->group(function () {
         // Artikel Terverifikasi
         Route::resource('artikel-terverifikasi', 'TerverifikasiController');
-        Route::post('artikel-terverifikasi/api', 'TerverifikasiController@api')->name('artikel-terverifikasi.api');
+        Route::prefix('artikel-terverifikasi')->name('artikel-terverifikasi.')->group(function () {
+            Route::post('api', 'TerverifikasiController@api')->name('api');
+            Route::get('subKegiatanByKegiatan/{id}', 'TerverifikasiController@subKegiatanByKegiatan')->name('subKegiatanByKegiatan');
+            Route::put('publish-artikel/{id}', 'TerverifikasiController@publishArtikel')->name('publish-artikel');
+            Route::put('unpublish-artikel/{id}', 'TerverifikasiController@unpublishArtikel')->name('unpublish-artikel');
+            Route::put('update-artikel/{id}', 'TerverifikasiController@updateArtikel')->name('update-artikel');
+        });
     });
 });
