@@ -51,7 +51,7 @@
             method: 'POST'
         },
         columns: [
-            {data: 'id', name: 'id', orderable: false, searchable: false, align: 'center', className: 'text-center'},
+            {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false, align: 'center', className: 'text-center'},
             {data: 'name', name: 'name'},
             {data: 'username', name: 'username'},
             {data: 'email', name: 'email'},
