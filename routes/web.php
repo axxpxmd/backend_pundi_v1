@@ -56,9 +56,19 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('artikel-terverifikasi', 'TerverifikasiController');
         Route::prefix('artikel-terverifikasi')->name('artikel-terverifikasi.')->group(function () {
             Route::post('api', 'TerverifikasiController@api')->name('api');
-            Route::get('subKegiatanByKegiatan/{id}', 'TerverifikasiController@subKegiatanByKegiatan')->name('subKegiatanByKegiatan');
+            Route::get('subKategoriBykategori/{id}', 'TerverifikasiController@subKategoriBykategori')->name('subKategoriBykategori');
             Route::put('publish-artikel/{id}', 'TerverifikasiController@publishArtikel')->name('publish-artikel');
             Route::put('unpublish-artikel/{id}', 'TerverifikasiController@unpublishArtikel')->name('unpublish-artikel');
+            Route::put('update-artikel/{id}', 'TerverifikasiController@updateArtikel')->name('update-artikel');
+        });
+
+        // Artikel Belum Terverifikasi
+        Route::resource('artikel-belumTerverifikasi', 'UnverifikasiController');
+        Route::prefix('artikel-belumTerverifikasi')->name('artikel-belumTerverifikasi.')->group(function () {
+            Route::post('api', 'UnverifikasiController@api')->name('api');
+            Route::get('subKategoriBykategori/{id}', 'UnverifikasiController@subKategoriBykategori')->name('subKategoriBykategori');
+            Route::put('publish-artikel/{id}', 'UnverifikasiController@publishArtikel')->name('publish-artikel');
+            Route::put('unpublish-artikel/{id}', 'UnverifikasiController@unpublishArtikel')->name('unpublish-artikel');
             Route::put('update-artikel/{id}', 'TerverifikasiController@updateArtikel')->name('update-artikel');
         });
     });

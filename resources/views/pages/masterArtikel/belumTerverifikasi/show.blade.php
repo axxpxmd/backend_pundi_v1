@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '| Artikel Terverifikasi')
+@section('title', '| Artikel Belum Terverifikasi')
 @section('content')
 <div class="page has-sidebar-left height-full">
     <header class="blue accent-3 relative nav-sticky">
@@ -97,7 +97,7 @@
                     </div>
                 </div>
             </div>
-            @include('pages.masterArtikel.terverifikasi.edit')
+            @include('pages.masterArtikel.belumTerverifikasi.edit')
         </div>
     </div>
 </div>

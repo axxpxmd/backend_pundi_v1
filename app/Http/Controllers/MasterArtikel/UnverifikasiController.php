@@ -26,11 +26,11 @@ use App\Models\Artikel;
 use App\Models\Kategori;
 use App\Models\Sub_Kategori;
 
-class TerverifikasiController extends Controller
+class UnverifikasiController extends Controller
 {
-    protected $route = 'master-artikel.artikel-terverifikasi.';
-    protected $view  = 'pages.masterArtikel.terverifikasi.';
-    protected $title = 'Artikel Terverifikasi';
+    protected $route = 'master-artikel.artikel-belumTerverifikasi.';
+    protected $view  = 'pages.masterArtikel.belumTerverifikasi.';
+    protected $title = 'Artikel Belum Terverifikasi';
     protected $path  = 'public_html/storage/images/artikel/';
 
     public function index()
@@ -49,14 +49,14 @@ class TerverifikasiController extends Controller
 
     public function api(Request $request)
     {
-        $artikel      = Artikel::select('id', 'judul', 'kategori_id', 'tag', 'artikel_view')->wherestatus(1)->get();
+        $artikel      = Artikel::select('id', 'judul', 'kategori_id', 'tag', 'artikel_view')->wherestatus(0)->get();
         $kategori     = $request->kategori_id;
         $sub_kategori = $request->sub_kategori_id;
 
         if ($sub_kategori != 0) {
-            $artikel = Artikel::select('id', 'judul', 'kategori_id', 'tag', 'artikel_view')->wheresub_kategori_id($sub_kategori)->wherestatus(1)->get();
+            $artikel = Artikel::select('id', 'judul', 'kategori_id', 'tag', 'artikel_view')->wheresub_kategori_id($sub_kategori)->wherestatus(0)->get();
         } elseif ($kategori != 0) {
-            $artikel = Artikel::select('id', 'judul', 'kategori_id', 'tag', 'artikel_view')->wherekategori_id($kategori)->wherestatus(1)->get();
+            $artikel = Artikel::select('id', 'judul', 'kategori_id', 'tag', 'artikel_view')->wherekategori_id($kategori)->wherestatus(0)->get();
         }
         return DataTables::of($artikel)
             ->addColumn('action', function ($p) {

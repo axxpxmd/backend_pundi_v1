@@ -45,7 +45,7 @@
         </a>
     </li>
     <li class="no-b">
-        <a>
+        <a href="{{ route('master-artikel.artikel-belumTerverifikasi.index') }}">
             <i class="icon icon-document-cancel2 text-danger s-18"></i> 
             <span>Belum Terverifikasi</span>
         </a>
