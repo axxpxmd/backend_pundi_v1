@@ -31,7 +31,7 @@
     <li class="header light"><strong>USER</strong></li>
     <li class="no-b">
         <a href="{{ route('master-user.user.index') }}">
-            <i class="icon icon-user purple-text s-18"></i> 
+            <i class="icon icon-user orange-text s-18"></i> 
             <span>User</span>
         </a>
     </li>
