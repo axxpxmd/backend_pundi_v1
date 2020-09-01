@@ -72,7 +72,7 @@
     @can('master-konsultasi')
     <li class="header light"><strong>MASTER KONSULTASI</strong></li>
     <li class="no-b">
-        <a href="{{ route('blank-page') }}">
+        <a href="{{ route('master-konsultasi.pertanyaan.index') }}">
             <i class="icon icon-question text-success s-18"></i> 
             <span>Pertanyaan</span>
         </a>
