@@ -46,7 +46,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group m-0">
                                         <label for="" class="col-form-label s-12 col-md-4">Icon</label>
-                                        <input type="file" name="icon" id="file" class="input-file" onchange="tampilkanPreview(this,'preview')">
+                                        <input type="file" name="header" id="file" class="input-file" onchange="tampilkanPreview(this,'preview')">
                                         <label for="file" class="btn-tertiary js-labelFile col-md-8">
                                             <i class="icon icon-image mr-2 m-b-1"></i>
                                             <span id="changeText" class="js-fileName">Browse Image</span>
@@ -55,6 +55,8 @@
                                         <hr>
                                         <img width="150" class="rounded img-fluid m-l-240 mt-1" id="preview" alt=""/>
                                     </div>
+                                    @include('pages.masterGambar.input1')
+                                    @include('pages.masterGambar.input2')
                                     <div class="mt-2 m-l-158">
                                         <button type="submit" class="btn btn-primary btn-sm" id="action"><i class="icon-save mr-2"></i>Simpan<span id="txtAction"></span></button>
                                         <a class="btn btn-sm" onclick="add()" id="reset">Reset</a>
@@ -149,7 +151,13 @@
         $('#txtAction').html('');
         $('#result').attr({ 'src': '-', 'alt': ''});
         $('#preview').attr({ 'src': '-', 'alt': ''});
+        $('#result1').attr({ 'src': '-', 'alt': ''});
+        $('#preview1').attr({ 'src': '-', 'alt': ''});
+        $('#result2').attr({ 'src': '-', 'alt': ''});
+        $('#preview2').attr({ 'src': '-', 'alt': ''});
         $('#changeText').html('Browse Image')
+        $('#changeText1').html('Browse Image')
+        $('#changeText2').html('Browse Image')
         $('#reset').show();
         $('#n_app').focus();
     }
@@ -203,9 +211,15 @@
         $('input[name=_method]').val('PATCH');
         $.get("{{ route($route.'edit', ':id') }}".replace(':id', id), function(data){
             $('#id').val(data.id);
-            var url =  "{{ config('app.sftp_src') }}"+"{{ $path }}"+data.icon;
+            var url =  "{{ config('app.ftp_src') }}"+"{{ $path }}"+data.header;
             $('#result').attr({'src': url, 'class': 'img-fluid m-l-240 mt-2 mb-2'});
             $('#changeText').html('Change Image')
+            var url1 =  "{{ config('app.ftp_src') }}"+"{{$path}}"+data.footer;
+            $('#result1').attr({'src': url1, 'class': 'img-fluid m-l-240 mt-2 mb-2'});
+            $('#changeText1').html('Change Image')
+            var url2 =  "{{ config('app.ftp_src') }}"+"{{$path}}"+data.poster;
+            $('#result2').attr({'src': url2, 'class': 'img-fluid m-l-240 mt-2 mb-2'});
+            $('#changeText2').html('Change Image')
         }, "JSON").fail(function(){
             reload();
         });
