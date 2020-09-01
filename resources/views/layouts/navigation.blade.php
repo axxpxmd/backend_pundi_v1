@@ -27,6 +27,15 @@
         </a>
     </li>
     @endcan
+    @can('master-kategori')
+    <li class="header light"><strong>MASTER Kategori</strong></li>
+    <li class="no-b">
+        <a href="{{ route('blank-page') }}">
+            <i class="icon icon-archive red-text s-18"></i> 
+            <span>Kategori</span>
+        </a>
+    </li>
+    @endcan
     @can('master-user')
     <li class="header light"><strong>MASTER USER</strong></li>
     <li class="no-b">
@@ -57,6 +66,19 @@
         <a href="{{ route('master-gambar.gambar.index') }}">
             <i class="icon icon-file-picture-o blue-text s-18"></i> 
             <span>Gambar</span>
+        </a>
+    </li>
+    @endcan
+    @can('master-konsultasi')
+    <li class="header light"><strong>MASTER KONSULTASI</strong></li>
+    <li class="no-b">
+        <a href="{{ route('blank-page') }}">
+            <i class="icon icon-question text-success s-18"></i> 
+            <span>Pertanyaan</span>
+        </a>
+        <a href="{{ route('master-konsultasi.konsultasi.index') }}">
+            <i class="icon icon-document-text3 amber-text s-18"></i> 
+            <span>Konsultasi</span>
         </a>
     </li>
     @endcan

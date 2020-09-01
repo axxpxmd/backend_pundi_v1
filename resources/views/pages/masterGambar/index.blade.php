@@ -7,7 +7,7 @@
             <div class="row p-t-b-10 ">
                 <div class="col">
                     <h4>
-                        <i class="icon icon-settings2"></i>
+                        <i class="icon icon-file-picture-o"></i>
                         List {{ $title }}
                     </h4>
                 </div>

@@ -85,8 +85,17 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('gambar/api', 'GambarController@api')->name('gambar.api');
     });
 
-     /**
+    /**
      * Page Not Found
      */
     Route::get('blank-page', 'BlankPageController@index')->name('blank-page');
+
+    /**
+     * Master Konsultasi
+     */
+    Route::prefix('master-konsultasi')->namespace('MasterKonsultasi')->name('master-konsultasi.')->group(function () {
+        // Konsultasi
+        Route::resource('konsultasi', 'KonsultasiController');
+        Route::post('konsultasi.api', 'KonsultasiController@api')->name('konsultasi.api');
+    });
 });
