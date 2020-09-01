@@ -101,4 +101,13 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('pertanyaan', 'PertanyaanController');
         Route::post('pertanyaan.api', 'PertanyaanController@api')->name('pertanyaan.api');
     });
+
+    /**
+     * Master Komen
+     */
+    Route::prefix('master-komen')->namespace('MasterKomen')->name('master-komen.')->group(function () {
+        // Komen
+        Route::resource('komen', 'KomenController');
+        Route::post('komen.api', 'KomenController@api')->name('komen.api');
+    });
 });

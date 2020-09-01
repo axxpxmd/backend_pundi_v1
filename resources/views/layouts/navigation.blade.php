@@ -65,7 +65,7 @@
     <li class="no-b">
         <a href="{{ route('master-gambar.gambar.index') }}">
             <i class="icon icon-file-picture-o blue-text s-18"></i> 
-            <span>Gambar</span>
+            <span>Gambar</span>p
         </a>
     </li>
     @endcan
@@ -79,6 +79,15 @@
         <a href="{{ route('master-konsultasi.konsultasi.index') }}">
             <i class="icon icon-document-text3 amber-text s-18"></i> 
             <span>Konsultasi</span>
+        </a>
+    </li>
+    @endcan
+    @can('master-komen')
+    <li class="header light"><strong>MASTER KOMEN</strong></li>
+    <li class="no-b">
+        <a href="{{ route('master-komen.komen.index') }}">
+            <i class="icon icon-comments blue-text s-18"></i> 
+            <span>Komen</span>
         </a>
     </li>
     @endcan
