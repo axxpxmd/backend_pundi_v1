@@ -4,13 +4,13 @@
     </div>
     <div class="mt-4 text-center small">
         <span class="mr-2">
-            <i class="fas fa-circle text-primary"></i> Headline
+            <i class="fas fa-circle text-primary"></i> Ulasana
         </span>
         <span class="mr-2">
-            <i class="fas fa-circle text-success"></i> Indepth
+            <i class="fas fa-circle text-success"></i> Kajian
         </span>
         <span class="mr-2">
-            <i class="fas fa-circle text-info"></i> Kebijakan
+            <i class="fas fa-circle text-info"></i> Kreativitas
         </span>
         <span class="mr-2">
             <i class="fas fa-circle text-warning"></i> Serba Serbi
