@@ -30,6 +30,13 @@ class HomeController extends Controller
 
     public function index()
     {
+        // Count Kategori in artikel
+        $artikel_headline   = Artikel::wherekategori_id(1)->count();
+        $artikel_indepth    = Artikel::wherekategori_id(2)->count();
+        $artikel_kebijakan  = Artikel::wherekategori_id(3)->count();
+        $artikel_serbaserbi = Artikel::wherekategori_id(4)->count();
+        $artikel_konsultasi = Artikel::wherekategori_id(5)->count();
+
         /**
          * Count artikel by kategori
          */
@@ -72,7 +79,12 @@ class HomeController extends Controller
             'countArtikel',
             'listArtikel',
             'totalArtikel',
-            'totalUserArtikel'
+            'totalUserArtikel',
+            'artikel_headline',
+            'artikel_indepth',
+            'artikel_kebijakan',
+            'artikel_serbaserbi',
+            'artikel_konsultasi'
         ));
     }
 }

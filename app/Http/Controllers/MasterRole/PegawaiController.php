@@ -65,6 +65,7 @@ class PegawaiController extends Controller
                     return "<img width='50' class='rounded img-fluid mx-auto d-block' alt='photo' src='" . asset('images/boy.png') . "'>";
                 }
             })
+            ->addIndexColumn()
             ->rawColumns(['action', 'photo', 'admin_id'])
             ->toJson();
     }

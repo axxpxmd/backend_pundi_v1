@@ -132,7 +132,7 @@
             method: 'POST'
         },
         columns: [
-            {data: 'id', name: 'id', orderable: false, searchable: false, align: 'center', className: 'text-center'},
+            {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false, align: 'center', className: 'text-center'},
             {data: 'admin_id', name: 'admin_id'},
             {data: 'nama', name: 'nama'},
             {data: 'email', name: 'email'},

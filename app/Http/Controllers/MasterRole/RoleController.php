@@ -53,6 +53,7 @@ class RoleController extends Controller
                     <a href='#' onclick='edit(" . $p->id . ")' title='Edit Role'><i class='icon-pencil mr-1'></i></a>
                     <a href='#' onclick='remove(" . $p->id . ")' class='text-danger' title='Hapus Role'><i class='icon-remove'></i></a>";
             })
+            ->addIndexColumn()
             ->rawColumns(['action', 'permissions'])
             ->toJson();
     }

@@ -48,6 +48,7 @@ class PermissionController extends Controller
                     <a  href='#' onclick='edit(" . $p->id . ")' title='Edit Permission'><i class='icon-pencil mr-1'></i></a>
                     <a href='#' onclick='remove(" . $p->id . ")' class='text-danger' title='Hapus Permission'><i class='icon-remove'></i></a>";
             })
+            ->addIndexColumn()
             ->rawColumns(['action'])
             ->toJson();
     }

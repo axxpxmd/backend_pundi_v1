@@ -76,7 +76,7 @@
             method: 'POST'
         },
         columns: [
-            {data: 'id', name: 'id', orderable: false, searchable: false, align: 'center', className: 'text-center'},
+            {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false, align: 'center', className: 'text-center'},
             {data: 'name', name: 'name'},
             {data: 'guard_name', name: 'guard_name'},
             {data: 'action', name: 'action', orderable: false, searchable: false, className: 'text-center'}

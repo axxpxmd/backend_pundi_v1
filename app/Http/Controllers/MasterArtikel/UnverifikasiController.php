@@ -69,6 +69,7 @@ class UnverifikasiController extends Controller
             ->editColumn('kategori_id', function ($p) {
                 return $p->kategori->n_kategori;
             })
+            ->addIndexColumn()
             ->rawColumns(['action', 'judul'])
             ->toJson();
     }
