@@ -68,7 +68,7 @@
                     </div>
                     <div class="row">
                         <label class="col-md-2 text-right s-12"><strong>Foto  :</strong></label>
-                        <img class="ml-2 m-t-7 rounded-circle" src="{{ config('app.ftp_src').'/ava/'.$userPundi->photo }}" width="100" alt="icon">
+                        <img class="ml-2 m-t-7 rounded-circle" src="{{ config('app.ftp_src').$path.$userPundi->photo }}" width="100" alt="icon">
                     </div>
                 </div>
             </div>

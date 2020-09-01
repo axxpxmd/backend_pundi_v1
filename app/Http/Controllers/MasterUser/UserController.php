@@ -27,7 +27,7 @@ class UserController extends Controller
     protected $route = 'master-user.user.';
     protected $view  = 'pages.masteruser.';
     protected $title = 'Data User';
-    protected $path  = 'public_html/storage/images/ava/';
+    protected $path  = '/images/ava/';
 
     public function index()
     {
@@ -52,7 +52,7 @@ class UserController extends Controller
             })
             ->editColumn('photo',  function ($p) {
                 if ($p->photo != null) {
-                    return "<img width='50' class='rounded img-fluid mx-auto d-block rounded-circle' alt='photo' src='" . config('app.ftp_src') . "/ava/" . $p->photo . "'>";
+                    return "<img width='50' class='rounded img-fluid mx-auto d-block rounded-circle' alt='photo' src='" . config('app.ftp_src') . $this->path . $p->photo . "'>";
                 } else {
                     return "<img width='50' class='rounded img-fluid mx-auto d-block' alt='photo' src='" . asset('images/boy.png') . "'>";
                 }
@@ -66,13 +66,15 @@ class UserController extends Controller
     {
         $route = $this->route;
         $title = $this->title;
+        $path  = $this->path;
 
         $userPundi = userPundi::findOrFail($id);
 
         return view($this->view . 'show', compact(
             'route',
             'title',
-            'userPundi'
+            'userPundi',
+            'path'
         ));
     }
 

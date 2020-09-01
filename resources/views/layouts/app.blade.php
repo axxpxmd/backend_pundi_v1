@@ -41,7 +41,7 @@
                 <div class="user-panel p-3 light mb-2">
                     <div>
                         <div class="float-left image">
-                            <img width="50" class="mr-3 rounded-circle" src="{{ config('app.ftp_src').'ava/'.$user_composer->photo }}" alt="User Image">
+                            <img width="50" class="mr-3 rounded-circle" src="{{ config('app.ftp_src').'images/ava/'.$user_composer->photo }}" alt="User Image">
                         </div>
                         <div class="float-left info">
                             <h6 class="font-weight-light mb-1">{{ Auth::user()->username }}</h6>

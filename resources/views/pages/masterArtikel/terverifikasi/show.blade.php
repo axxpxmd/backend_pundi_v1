@@ -87,7 +87,7 @@
                                 <strong>ARTIKEL</strong>
                             </div>
                             <div class="card-body">
-                                <img class="img-fluid rounded mx-auto d-block mb-3" src="{{ config('app.ftp_src').'artikel/'.$artikel->gambar }}" width="350" alt="photo">
+                                <img class="img-fluid rounded mx-auto d-block mb-3" src="{{ config('app.ftp_src').$path.$artikel->gambar }}" width="350" alt="photo">
                                 <h5 class="mb-3 text-center">{{ $artikel->judul }}</h5>
                                 <div>
                                     {!! $artikel->isi !!}

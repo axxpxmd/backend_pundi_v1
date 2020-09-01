@@ -31,7 +31,7 @@ class TerverifikasiController extends Controller
     protected $route = 'master-artikel.artikel-terverifikasi.';
     protected $view  = 'pages.masterArtikel.terverifikasi.';
     protected $title = 'Artikel Terverifikasi';
-    protected $path  = 'public_html/storage/images/artikel/';
+    protected $path  = '/images/artikel/';
 
     public function index()
     {
@@ -82,6 +82,7 @@ class TerverifikasiController extends Controller
     {
         $route = $this->route;
         $title = $this->title;
+        $path  = $this->path;
 
         $artikel = Artikel::findOrFail($id);
         $editor  = Artikel::where('artikel.id', $id)->join('admin_details', 'artikel.editor_id', '=', 'admin_details.admin_id')
@@ -91,7 +92,8 @@ class TerverifikasiController extends Controller
             'route',
             'title',
             'artikel',
-            'editor'
+            'editor',
+            'path'
         ));
     }
 

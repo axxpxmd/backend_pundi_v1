@@ -24,7 +24,7 @@
                         <strong>ARTIKEL</strong>
                     </div>
                     <div class="card-body">
-                        <img class="img-fluid rounded mx-auto d-block mb-3" src="{{ config('app.ftp_src').'artikel/'.$artikel->gambar }}" width="350" alt="photo">
+                        <img class="img-fluid rounded mx-auto d-block mb-3" src="{{ config('app.ftp_src').'/images/artikel/'.$artikel->gambar }}" width="350" alt="photo">
                         <div class="text-center">
                             <input type="file" name="gambar" id="file" class="input-file" onchange="tampilkanPreview(this,'preview')">
                             <label for="file" class="btn-tertiary js-labelFile col-md-3 mx-auto d-block" style="margin-bottom: -10px">
