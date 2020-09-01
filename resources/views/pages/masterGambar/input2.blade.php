@@ -1,5 +1,5 @@
 <div class="form-group m-0">
-    <label for="" class="col-form-label s-12 col-md-4">Icon Register</label>
+    <label for="" class="col-form-label s-12 col-md-4">Poster</label>
     <input type="file" name="poster" id="file2" class="input-file2" onchange="tampilkanPreview2(this,'preview2')">
     <label for="file2" class="btn-tertiary js-labelFile2 col-md-8">
         <i class="icon icon-image mr-2 m-b-1"></i>
