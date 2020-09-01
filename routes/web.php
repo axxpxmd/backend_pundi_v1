@@ -20,7 +20,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
 
-    // Master Roles
+    /**
+     * Master Role
+     */
     Route::prefix('master-roles')->namespace('MasterRole')->name('master-role.')->group(function () {
         // Role
         Route::resource('role', 'RoleController');
@@ -31,11 +33,9 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('{id}/getPermissions', 'RoleController@getPermissions')->name('getPermissions');
             Route::delete('{name}/destroyPermission', 'RoleController@destroyPermission')->name('destroyPermission');
         });
-
         // Permission
         Route::resource('permission', 'PermissionController');
         Route::post('permission/api', 'PermissionController@api')->name('permission.api');
-
         // Pegawai
         Route::resource('pegawai', 'PegawaiController');
         Route::post('pegawai/api', 'PegawaiController@api')->name('pegawai.api');
@@ -43,14 +43,18 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('pegawai/{id}/updatePassword', 'PegawaiController@updatePassword')->name('pegawai.updatePassword');
     });
 
-    // Master User
+    /**
+     * Master User
+     */
     Route::prefix('master-users')->namespace('MasterUser')->name('master-user.')->group(function () {
         // User
         Route::resource('user', 'UserController');
         Route::post('user/api', 'UserController@api')->name('user.api');
     });
 
-    // Master Artikel
+    /**
+     * Master Artikel
+     */
     Route::prefix('master-artikels')->namespace('MasterArtikel')->name('master-artikel.')->group(function () {
         // Artikel Terverifikasi
         Route::resource('artikel-terverifikasi', 'TerverifikasiController');
@@ -61,7 +65,6 @@ Route::group(['middleware' => ['auth']], function () {
             Route::put('unpublish-artikel/{id}', 'TerverifikasiController@unpublishArtikel')->name('unpublish-artikel');
             Route::put('update-artikel/{id}', 'TerverifikasiController@updateArtikel')->name('update-artikel');
         });
-
         // Artikel Belum Terverifikasi
         Route::resource('artikel-belumTerverifikasi', 'UnverifikasiController');
         Route::prefix('artikel-belumTerverifikasi')->name('artikel-belumTerverifikasi.')->group(function () {
@@ -71,5 +74,14 @@ Route::group(['middleware' => ['auth']], function () {
             Route::put('unpublish-artikel/{id}', 'UnverifikasiController@unpublishArtikel')->name('unpublish-artikel');
             Route::put('update-artikel/{id}', 'TerverifikasiController@updateArtikel')->name('update-artikel');
         });
+    });
+
+    /**
+     * Master Gambar
+     */
+    Route::prefix('master-gambar')->namespace('MasterGambar')->name('master-gambar.')->group(function () {
+        // Gambar
+        Route::resource('gambar', 'GambarController');
+        Route::post('gambar/api', 'GambarController@api')->name('gambar.api');
     });
 });

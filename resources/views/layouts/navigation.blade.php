@@ -28,7 +28,7 @@
     </li>
     @endcan
     @can('master-user')
-    <li class="header light"><strong>USER</strong></li>
+    <li class="header light"><strong>MASTER USER</strong></li>
     <li class="no-b">
         <a href="{{ route('master-user.user.index') }}">
             <i class="icon icon-user orange-text s-18"></i> 
@@ -37,7 +37,7 @@
     </li>
     @endcan
     @can('master-artikel')
-    <li class="header light"><strong>ARTIKEL</strong></li>
+    <li class="header light"><strong>MASTER ARTIKEL</strong></li>
     <li class="no-b">
         <a href="{{ route('master-artikel.artikel-terverifikasi.index') }}">
             <i class="icon icon-document-checked2 text-success s-18"></i> 
@@ -51,18 +51,12 @@
         </a>
     </li>
     @endcan
-    @can('master-artikel')
-    <li class="header light"><strong>POSTER</strong></li>
+    @can('master-gambar')
+    <li class="header light"><strong>MASTER GAMBAR</strong></li>
     <li class="no-b">
-        <a href="{{ route('master-artikel.artikel-terverifikasi.index') }}">
-            <i class="icon icon-tripadvisor purple-text s-18"></i> 
-            <span>Iklan</span>
-        </a>
-    </li>
-    <li class="no-b">
-        <a href="{{ route('master-artikel.artikel-belumTerverifikasi.index') }}">
-            <i class="icon icon-document-cancel2 text-danger s-18"></i> 
-            <span>Belum Terverifikasi</span>
+        <a href="{{ route('master-gambar.gambar.index') }}">
+            <i class="icon icon-file-picture-o blue-text s-18"></i> 
+            <span>Gambar</span>
         </a>
     </li>
     @endcan
