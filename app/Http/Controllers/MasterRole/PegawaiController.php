@@ -32,7 +32,7 @@ class PegawaiController extends Controller
     protected $route = 'master-role.pegawai.';
     protected $view  = 'pages.masterRole.pegawai.';
     protected $title = 'Config Pegawai';
-    protected $path  = 'public_html/storage/images/ava/';
+    protected $path  = '/images/ava/';
 
     public function index()
     {
@@ -60,7 +60,7 @@ class PegawaiController extends Controller
             })
             ->editColumn('photo',  function ($p) {
                 if ($p->photo != null) {
-                    return "<img width='50' class='img-fluid mx-auto d-block rounded-circle' alt='photo' src='" . config('app.ftp_src') . "/ava/" . $p->photo . "'>";
+                    return "<img width='50' class='img-fluid mx-auto d-block rounded-circle' alt='photo' src='" . config('app.ftp_src') . $this->path . $p->photo . "'>";
                 } else {
                     return "<img width='50' class='rounded img-fluid mx-auto d-block' alt='photo' src='" . asset('images/boy.png') . "'>";
                 }
@@ -133,6 +133,7 @@ class PegawaiController extends Controller
     {
         $route = $this->route;
         $title = $this->title;
+        $path  = $this->path;
 
         $admin_detail = AdminDetails::findOrFail($id);
         $admin = User::whereid($admin_detail->admin_id)->first();
@@ -148,7 +149,8 @@ class PegawaiController extends Controller
             'admin_detail',
             'admin',
             'roles',
-            'role'
+            'role',
+            'path'
         ));
     }
 
