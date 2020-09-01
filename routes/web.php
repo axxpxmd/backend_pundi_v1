@@ -84,4 +84,9 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('gambar', 'GambarController');
         Route::post('gambar/api', 'GambarController@api')->name('gambar.api');
     });
+
+     /**
+     * Page Not Found
+     */
+    Route::get('blank-page', 'BlankPageController@index')->name('blank-page');
 });

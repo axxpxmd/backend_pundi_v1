@@ -45,19 +45,19 @@
                         </div>
                         <div class="float-left info">
                             <h6 class="font-weight-light mb-1">{{ Auth::user()->username }}</h6>
-                            <a href="#"><i class="icon-circle text-primary blink mr-1"></i>Online</a>
+                            <a href="{{ route('blank-page') }}"><i class="icon-circle text-primary blink mr-1"></i>Online</a>
                         </div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="collapse multi-collapse" id="userSettingsCollapse">
                         <div class="list-group mt-3 shadow">
-                            <a href="#" class="list-group-item list-group-item-action ">
+                            <a href="{{ route('blank-page') }}" class="list-group-item list-group-item-action ">
                                 <i class="mr-2 icon-user text-blue"></i>Profile
                             </a>
-                            <a href="#" class="list-group-item list-group-item-action">
+                            <a href="{{ route('blank-page') }}" class="list-group-item list-group-item-action">
                                 <i class="mr-2 icon-cogs"></i>Settings
                             </a>
-                            <a href="#" class="list-group-item list-group-item-action">
+                            <a href="{{ route('blank-page') }}" class="list-group-item list-group-item-action">
                                 <i class="mr-2 icon-key4 orange-text"></i>Change Password
                             </a>
                         </div>
