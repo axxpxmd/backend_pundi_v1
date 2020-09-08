@@ -56,7 +56,7 @@ class PegawaiController extends Controller
                 <a href='#' onclick='remove(" . $p->id . ")' class='text-danger' title='Hapus Permission'><i class='icon-remove'></i></a>";
             })
             ->editColumn('admin_id', function ($p) {
-                return "<a href='" . route($this->route . 'show', $p->id) . "' class='text-primary pull-right' title='Show Data'>" . $p->admin->username . "</a>";
+                return "<a href='" . route($this->route . 'show', $p->id) . "' class='text-primary' title='Show Data'>" . $p->admin->username . "</a>";
             })
             ->editColumn('photo',  function ($p) {
                 if ($p->photo != null) {

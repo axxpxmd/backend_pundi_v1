@@ -48,7 +48,7 @@ class UserController extends Controller
                 return "<a href='#' onclick='remove(" . $p->id . ")' class='text-danger' title='Hapus Permission'><i class='icon-remove'></i></a>";
             })
             ->editColumn('name', function ($p) {
-                return "<a href='" . route($this->route . 'show', $p->id) . "' class='text-primary pull-right' title='Show Data'>" . $p->name . "</a>";
+                return "<a href='" . route($this->route . 'show', $p->id) . "' class='text-primary' title='Show Data'>" . $p->name . "</a>";
             })
             ->editColumn('photo',  function ($p) {
                 if ($p->photo != null) {
