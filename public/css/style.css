@@ -106,3 +106,8 @@
     padding: 0 10px;
     cursor: pointer;
 }
+
+.img-circular{
+    object-fit: cover;
+    object-position: center;
+}

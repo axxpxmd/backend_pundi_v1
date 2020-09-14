@@ -65,7 +65,7 @@
     <li class="no-b">
         <a href="{{ route('master-gambar.gambar.index') }}">
             <i class="icon icon-file-picture-o blue-text s-18"></i> 
-            <span>Gambar</span>p
+            <span>Gambar</span>
         </a>
     </li>
     @endcan
