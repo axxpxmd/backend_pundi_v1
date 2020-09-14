@@ -60,7 +60,7 @@ class PegawaiController extends Controller
             })
             ->editColumn('photo',  function ($p) {
                 if ($p->photo != null) {
-                    return "<img width='50' class='img-fluid mx-auto d-block rounded-circle' alt='photo' src='" . config('app.ftp_src') . $this->path . $p->photo . "'>";
+                    return "<img width='50' height='50' class='mx-auto d-block rounded-circle img-circular' alt='photo' src='" . config('app.ftp_src') . $this->path . $p->photo . "'>";
                 } else {
                     return "<img width='50' class='rounded img-fluid mx-auto d-block' alt='photo' src='" . asset('images/boy.png') . "'>";
                 }

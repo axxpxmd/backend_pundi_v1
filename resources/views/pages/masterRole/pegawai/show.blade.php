@@ -62,7 +62,7 @@
                                     <div class="row">
                                         <label class="col-md-2 text-right s-12"><strong>Foto :</strong></label>
                                         @if ($admin_detail->photo != null)
-                                        <img class="ml-2 m-t-7 rounded-circle" src="{{ config('app.ftp_src').'images/ava/'.$admin_detail->photo }}" width="100" alt="icon">
+                                        <img class="ml-2 m-t-7 rounded-circle img-circular" src="{{ config('app.ftp_src').'images/ava/'.$admin_detail->photo }}" width="100" height="100" alt="icon">
                                         @else
                                         <img class="ml-2 m-t-7 rounded-circle" src="{{ asset('images/boy.png') }}" width="100" alt="icon">
                                         @endif
