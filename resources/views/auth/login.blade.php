@@ -18,12 +18,12 @@
     <div class="page parallel">
         <div class="d-flex row">
             <div class="col-md-3 white">
-                <div class="pl-5 pt-5 pr-5 mt-5 pb-0">
+                <div class="pl-5 pr-5" style="margin-top: 200px">
                     <img src="{{ asset('images/logo.png') }}" width="220" alt=""/>
                 </div>
-                <div class="p-5">
+                <div class="p-5 pt-0">
                     <h3>Selamat Datang</h3>
-                    <p>Silahkan masukkan username dan password Anda.</p>
+                    <p>Silahkan masukan username dan password Anda.</p>
                     <form method="POST" action="{{ route('login') }}" autocomplete="off">
                         @csrf
                         <div class="form-group has-icon"><i class="icon icon-user"></i>

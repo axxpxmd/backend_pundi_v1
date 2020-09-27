@@ -177,7 +177,7 @@ class PegawaiController extends Controller
         $admin    = User::find($admin_detail->admin_id);
         $admin->update([
             'username' => $username
-        ]);
+            ]);
 
         // Tahap 2
         $nama    = $request->nama;
