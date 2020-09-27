@@ -36,7 +36,7 @@
 <div id="app">
     <aside class="main-sidebar fixed offcanvas shadow" data-toggle='offcanvas'>
         <section class="sidebar">
-            <div class=" mt-3 mb-3 ml-3">
+            <div class="p-4">
                 <img src="{{ asset('images/logo.png')}}" class="mt-2 mb-2 ml-4" width="150" alt="Logo Top">
             </div>
             <div class="relative">
